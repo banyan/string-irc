@@ -14,7 +14,7 @@ Tested under Ruby 1.9.2 and Ruby 1.8.7.
 
 See current status at [Travis CI](http://travis-ci.org/banyan/string-irc).
 
-Usage
+Getting Started
 ---
 
     require 'string-irc'
@@ -24,7 +24,10 @@ Usage
     si2 = StringIrc.new('world').yellow('green').bold
     msg = "#{si1.to_s} #{si2.to_s}" # You must add #to_s, this is the diffrence from original.
 
-    si.COLOR([BG_COLOR]);
+Usage
+---
+
+    si.COLOR([BG_COLOR])
 
     Add color code and return StringIRC object. BG_COLOR is
     optional. Available COLOR and BC_COLOR are as follows.
