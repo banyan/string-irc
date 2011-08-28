@@ -1,9 +1,11 @@
-===
-string-irc
+# string-irc - Add color codes for mIRC compatible client.
+
+[![Build Status](https://secure.travis-ci.org/[banyan]/[string-irc].png)](http://travis-ci.org/[banyan]/[string-irc])
+
+Description
+---
 
 Port of http://search.cpan.org/~hirose/String-IRC-0.04/ from Perl to Ruby.
-
-Add color codes for mIRC compatible client.
 
 Compatibility
 ---
