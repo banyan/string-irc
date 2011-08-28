@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "string-irc"
   gem.homepage = "http://github.com/banyan/string-irc"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{add color codes for mIRC compatible client}
+  gem.description = %Q{add color codes for mIRC compatible client}
   gem.email = "ameutau@gmail.com"
   gem.authors = ["banyan"]
   # dependencies defined in Gemfile
