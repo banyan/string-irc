@@ -33,10 +33,11 @@ class StringIrc
 
   color_name_table = {}
 
-  COLOR_TABLE.each_with_index do | colors, code |
-    colors[1].each do |color|
+  COLOR_TABLE.each do | code, colors |
+    colors.each do |color|
       color_name_table[color] = code
-      define_method(color) do | bg_color = nil |
+      define_method(color) do | *args |
+        bg_color = args.first || nil
         if (!!bg_color and color_name_table.include?(bg_color))
           color_code = "#{COLOR_CODE}#{sprintf("%02d,%02d", code, color_name_table[bg_color])}"
         else

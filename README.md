@@ -10,9 +10,9 @@ Port of http://search.cpan.org/~hirose/String-IRC-0.04/ from Perl to Ruby.
 Compatibility
 ---
 
-Tested under Ruby 1.9.2.
+Tested under Ruby 1.9.2 and Ruby 1.8.7.
 
-Ruby 1.8.7 is not supported yet.
+See more detail in [Travis CI](http://travis-ci.org/banyan/string-irc).
 
 Usage
 ---
