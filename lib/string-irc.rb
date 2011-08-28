@@ -33,8 +33,8 @@ class StringIrc
 
   color_name_table = {}
 
-  COLOR_TABLE.each_with_index do | colors, code |
-    colors[1].each do |color|
+  COLOR_TABLE.each do | code, colors |
+    colors.each do |color|
       color_name_table[color] = code
       define_method(color) do | *args |
         bg_color = args.first || nil
