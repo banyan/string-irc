@@ -10,43 +10,43 @@ describe StringIrc do
     subject { StringIrc.new('hello') }
 
     it_should_behave_like 'when it first created' do
-      its(:to_s) { should == "hello\u000F" }
+      its(:to_s) { should == "hello\x0f" }
     end
 
     context "single color" do
-      its("red.to_s")          { should == "\u000304hello\u000F" }
-      its("blue.to_s")         { should == "\u000302hello\u000F" }
-      its("blue_cyan.to_s")    { should == "\u000310hello\u000F" }
-      its("light_purple.to_s") { should == "\u000313hello\u000F" }
+      its("red.to_s")          { should == "\x0304hello\x0f" }
+      its("blue.to_s")         { should == "\x0302hello\x0f" }
+      its("blue_cyan.to_s")    { should == "\x0310hello\x0f" }
+      its("light_purple.to_s") { should == "\x0313hello\x0f" }
     end
 
     context "decoration" do
-      its("bold.to_s")      { should == "\u0002hello\u000F" }
-      its("underline.to_s") { should == "\u001Fhello\u000F" }
-      its("inverse.to_s")   { should == "\u0016hello\u000F" }
+      its("bold.to_s")      { should == "\x02hello\x0f" }
+      its("underline.to_s") { should == "\x1fhello\x0f" }
+      its("inverse.to_s")   { should == "\x16hello\x0f" }
     end
 
     context "complex" do
-      its("bold.yellow.to_s")                   { should == "\u000308\u0002hello\u000F" }
-      its("bold.yellow.underline.to_s")         { should == "\u001F\u000308\u0002hello\u000F" }
-      its("bold.yellow.underline.inverse.to_s") { should == "\u0016\u001F\u000308\u0002hello\u000F" }
+      its("bold.yellow.to_s")                   { should == "\x0308\x02hello\x0f" }
+      its("bold.yellow.underline.to_s")         { should == "\x1f\x0308\x02hello\x0f" }
+      its("bold.yellow.underline.inverse.to_s") { should == "\x16\x1f\x0308\x02hello\x0f" }
     end
 
     context "complex" do
-      its("bold.yellow.to_s")                   { should == "\u000308\u0002hello\u000F" }
-      its("bold.yellow.underline.to_s")         { should == "\u001F\u000308\u0002hello\u000F" }
-      its("bold.yellow.underline.inverse.to_s") { should == "\u0016\u001F\u000308\u0002hello\u000F" }
+      its("bold.yellow.to_s")                   { should == "\x0308\x02hello\x0f" }
+      its("bold.yellow.underline.to_s")         { should == "\x1f\x0308\x02hello\x0f" }
+      its("bold.yellow.underline.inverse.to_s") { should == "\x16\x1f\x0308\x02hello\x0f" }
     end
 
     context "bg-color" do
       describe 'yellow("red").to_s' do
-        it { subject.yellow("red").to_s.should == "\u000308,04hello\u000F" }
+        it { subject.yellow("red").to_s.should == "\x0308,04hello\x0f" }
       end
       describe 'red("yellow").to_s' do
-        it { subject.red("yellow").to_s.should == "\u000304,08hello\u000F" }
+        it { subject.red("yellow").to_s.should == "\x0304,08hello\x0f" }
       end
       describe 'red("cyan").to_s' do
-        it { subject.red("cyan").to_s.should == "\u000304,11hello\u000F" }
+        it { subject.red("cyan").to_s.should == "\x0304,11hello\x0f" }
       end
     end
   end
@@ -55,23 +55,23 @@ describe StringIrc do
     subject { StringIrc.new }
 
     it_should_behave_like "when it first created" do
-      its(:to_s) { should == "\u000F" }
+      its(:to_s) { should == "\x0f" }
     end
 
     context "single color" do
-      its("red.to_s") { should == "\u000304\u000F" }
+      its("red.to_s") { should == "\x0304\x0f" }
     end
 
     context "decoration" do
-      its("bold.to_s")      { should == "\u0002\u000F" }
-      its("underline.to_s") { should == "\u001F\u000F" }
-      its("inverse.to_s")   { should == "\u0016\u000F" }
+      its("bold.to_s")      { should == "\x02\x0f" }
+      its("underline.to_s") { should == "\x1f\x0f" }
+      its("inverse.to_s")   { should == "\x16\x0f" }
     end
 
     context "complex" do
-      its("bold.yellow.to_s")                   { should == "\u000308\u0002\u000F" }
-      its("bold.yellow.underline.to_s")         { should == "\u001F\u000308\u0002\u000F" }
-      its("bold.yellow.underline.inverse.to_s") { should == "\u0016\u001F\u000308\u0002\u000F" }
+      its("bold.yellow.to_s")                   { should == "\x0308\x02\x0f" }
+      its("bold.yellow.underline.to_s")         { should == "\x1f\x0308\x02\x0f" }
+      its("bold.yellow.underline.inverse.to_s") { should == "\x16\x1f\x0308\x02\x0f" }
     end
   end
 end
