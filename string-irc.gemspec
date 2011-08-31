@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{string-irc}
-  s.version = "0.1.2"
+  s.version = "0.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["banyan"]
-  s.date = %q{2011-08-29}
+  s.authors = [%q{banyan}]
+  s.date = %q{2011-08-31}
   s.description = %q{add color codes for mIRC compatible client}
   s.email = %q{ameutau@gmail.com}
   s.extra_rdoc_files = [
@@ -33,13 +33,12 @@ Gem::Specification.new do |s|
     "string-irc.gemspec"
   ]
   s.homepage = %q{http://github.com/banyan/string-irc}
-  s.licenses = ["MIT"]
-  s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
+  s.licenses = [%q{MIT}]
+  s.require_paths = [%q{lib}]
+  s.rubygems_version = %q{1.8.6}
   s.summary = %q{add color codes for mIRC compatible client}
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
