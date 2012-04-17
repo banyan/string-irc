@@ -1,7 +1,7 @@
 # string-irc - Add color codes for mIRC compatible client.
 
 [![Build Status](https://secure.travis-ci.org/banyan/string-irc.png)](http://travis-ci.org/banyan/string-irc)
-
+[<img src="https://gemnasium.com/banyan/string-irc.png" />](https://gemnasium.com/banyan/string-irc)
 Description
 ---
 
