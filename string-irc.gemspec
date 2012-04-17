@@ -13,10 +13,10 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "string-irc"
   gem.require_paths = ["lib"]
-  gem.version       = "0.2.0"
+  gem.version       = "0.2.1"
 
   # dependencies
-  gem.add_dependency 'rspec',   "~> 2.9.0"
-  gem.add_dependency "bundler", "~> 1.1.3"
-  gem.add_dependency "net-irc", "~> 0.0.9"
+  gem.add_development_dependency "rspec", "~> 2.9.0"
+  gem.add_development_dependency "bundler", "~> 1.1.3"
+  gem.add_runtime_dependency     "net-irc", "~> 0.0.9"
 end
