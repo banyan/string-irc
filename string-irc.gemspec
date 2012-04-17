@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "string-irc"
   gem.require_paths = ["lib"]
-  gem.version       = "0.2.1"
+  gem.version       = "0.2.2"
 
   # dependencies
   gem.add_development_dependency "rspec", "~> 2.9.0"
