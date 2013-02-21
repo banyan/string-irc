@@ -33,12 +33,6 @@ describe StringIrc do
       its("bold.yellow.underline.inverse.to_s") { should == "\x16\x1f\x0308\x02hello\x0f" }
     end
 
-    context "complex" do
-      its("bold.yellow.to_s")                   { should == "\x0308\x02hello\x0f" }
-      its("bold.yellow.underline.to_s")         { should == "\x1f\x0308\x02hello\x0f" }
-      its("bold.yellow.underline.inverse.to_s") { should == "\x16\x1f\x0308\x02hello\x0f" }
-    end
-
     context "bg-color" do
       describe 'yellow("red").to_s' do
         it { subject.yellow("red").to_s.should == "\x0308,04hello\x0f" }
