@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    string-irc (0.2.3)
+    string-irc (0.3.0)
       net-irc (>= 0.0.9)
 
 GEM
