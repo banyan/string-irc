@@ -46,13 +46,13 @@ describe StringIrc do
 
   context "when original color scheme method passed in" do
     describe '#rainbow' do
-      it { expect(subject.rainbow.to_s).to eq("\u000304h\u000307e\u000308l\u000303l\u000302o\u000F") }
-      it { expect(subject.rainbow("black").to_s).to eq("\u000304,01h\u000307,01e\u000308,01l\u000303,01l\u000302,01o\u000F") }
+      it { expect(subject.rainbow.to_s).to eq("\x0304h\x0307e\x0308l\x0303l\x0302o\x0f") }
+      it { expect(subject.rainbow("black").to_s).to eq("\x0304,01h\x0307,01e\x0308,01l\x0303,01l\x0302,01o\x0f") }
     end
 
     describe '#seven_eleven' do
-      it { expect(subject.seven_eleven.to_s).to eq("\u000307h\u000303e\u000304l\u000307l\u000303o\u000F") }
-      it { expect(subject.seven_eleven("black").to_s).to eq("\u000307,01h\u000303,01e\u000304,01l\u000307,01l\u000303,01o\u000F") }
+      it { expect(subject.seven_eleven.to_s).to eq("\x0307h\x0303e\x0304l\x0307l\x0303o\x0f") }
+      it { expect(subject.seven_eleven("black").to_s).to eq("\x0307,01h\x0303,01e\x0304,01l\x0307,01l\x0303,01o\x0f") }
     end
   end
 end
